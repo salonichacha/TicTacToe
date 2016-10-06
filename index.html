@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic Tac Toe</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body onload="startGame()">
+<center><h1>Welcome to my Tic Tac Toe Game</h1></center>
+<center><div id="message">Messages will go here</div></center><br/>
+<table>
+	<tr>
+		<td id="s1" class="square" onclick="nextMove(this);"></td>
+		<td id="s2" class="square" onclick="nextMove(this);"></td>
+		<td id="s3" class="square" onclick="nextMove(this);"></td>
+	</tr>
+
+
+	<tr>
+		<td id="s4" class="square" onclick="nextMove(this);"></td>
+		<td id="s5" class="square" onclick="nextMove(this);"></td>
+		<td id="s6" class="square" onclick="nextMove(this);"></td>
+	</tr>
+
+	
+	<tr>
+		<td id="s7" class="square" onclick="nextMove(this);"></td>
+		<td id="s8" class="square" onclick="nextMove(this);"></td>
+		<td id="s9" class="square" onclick="nextMove(this);"></td>
+	</tr>
+</table><br/>
+<center><button onclick="startGame()">Restart</button> <button onclick="undo()">Undo</button></center>
+
+</body>
+</html>
