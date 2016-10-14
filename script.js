@@ -1,4 +1,4 @@
-	function startGame(){
+function startGame(){
 			clearbox();	
 			document.winner = null;
 			document.turn = "X";
@@ -9,28 +9,30 @@
 				document.turn = "O";
 			}
 			setMessage(document.turn + " Get to start");
-		}
-	
-		function setMessage(msg){
+}
+
+function setMessage(msg){
 			document.getElementById("message").innerText = msg;
 
-		}
+}
 
-		function nextMove(square){
+function nextMove(square){
 
 			if(document.winner != null){
 
 			}
 			else if(square.innerText == ''){	
-					square.innerText = document.turn;
-					document.last = square.id;
+					square.innerText = document.turn;					
+					if(document.last != square.id){
+						document.last = square.id;
+						document.undoUsed = false;
+					}
 
 					if(document.turn == "X")document.turn ="O";	
 				 	else document.turn = "X";
-				 	document.undoUsed = false;
-
 				 	setMessage(document.turn + " Get to start")
 				 	
+
 				 	var isX = isWinner('X');
 					var isO = isWinner('O');
 
